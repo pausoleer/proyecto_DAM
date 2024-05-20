@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Workflow_databaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Fase">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="idTarea" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="idAnterior" Type="int" Nullable="false" />
+    <Property Name="ejecutable" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Workflow_database.dbo.Tarea' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Tarea">
+    <Key>
+      <PropertyRef Name="descripcion" />
+      <PropertyRef Name="estado" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estado" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="user_name" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="pass" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="idEquipo" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Workflow_databaseModelStoreContainer">
+    <EntitySet Name="Fase" EntityType="Self.Fase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tarea" EntityType="Self.Tarea" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tarea].[descripcion] AS [descripcion], 
+    [Tarea].[estado] AS [estado], 
+    [Tarea].[id] AS [id]
+    FROM [dbo].[Tarea] AS [Tarea]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
