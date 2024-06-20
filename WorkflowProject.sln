@@ -5,21 +5,41 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowProject", "WorkflowProject\WorkflowProject.csproj", "{E0BC48B4-A945-444F-84B3-79E7D72D3B65}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{B423536F-2014-4CBA-A402-04AD85AFA594}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
 		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E0BC48B4-A945-444F-84B3-79E7D72D3B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0BC48B4-A945-444F-84B3-79E7D72D3B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0BC48B4-A945-444F-84B3-79E7D72D3B65}.Debug|Default.ActiveCfg = Debug|Any CPU
+		{E0BC48B4-A945-444F-84B3-79E7D72D3B65}.Debug|Default.Build.0 = Debug|Any CPU
 		{E0BC48B4-A945-444F-84B3-79E7D72D3B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0BC48B4-A945-444F-84B3-79E7D72D3B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0BC48B4-A945-444F-84B3-79E7D72D3B65}.Release|Default.ActiveCfg = Release|Any CPU
+		{E0BC48B4-A945-444F-84B3-79E7D72D3B65}.Release|Default.Build.0 = Release|Any CPU
+		{B423536F-2014-4CBA-A402-04AD85AFA594}.Debug|Any CPU.ActiveCfg = Debug
+		{B423536F-2014-4CBA-A402-04AD85AFA594}.Debug|Default.ActiveCfg = Debug
+		{B423536F-2014-4CBA-A402-04AD85AFA594}.Debug|Default.Build.0 = Debug
+		{B423536F-2014-4CBA-A402-04AD85AFA594}.Release|Any CPU.ActiveCfg = Release
+		{B423536F-2014-4CBA-A402-04AD85AFA594}.Release|Default.ActiveCfg = Release
+		{B423536F-2014-4CBA-A402-04AD85AFA594}.Release|Default.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {23D25997-75C5-454E-9AA9-EB74E2AAC598}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
 	EndGlobalSection
 EndGlobal

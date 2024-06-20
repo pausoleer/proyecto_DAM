@@ -12,16 +12,16 @@ namespace WorkflowProject
         private static SessionManager instance;
         private SqlConnection connection;
 
-        // Constructor privado para evitar instanciación directa
         private SessionManager()
         {
             // Cadena de conexión a la base de datos
             string connectionString = "server=(localdb)\\Local;database=Workflow_database; integrated security=true";
-            // Inicializar la conexión
+            // Inicializa la conexión
             connection = new SqlConnection(connectionString);
         }
 
         // Método estático para obtener la instancia única de la clase
+        // Si la instancia no existe, se crea
         public static SessionManager GetInstance()
         {
             if (instance == null)
@@ -49,6 +49,9 @@ namespace WorkflowProject
                 connection.Close();
             }
         }
+        // Propiedad para almacenar el ID del equipo del usuario actual
         public string IdEquipoUsuario { get; set; }
+        // Propiedad para determinar si el usuario actual es administrador
+        public bool IsAdmin { get; set; }
     }
 }
